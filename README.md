@@ -33,8 +33,3 @@ Esses endpoints seguem as convenções REST ao usar métodos HTTP para manipula�
 - **Java 17+**
 - **Maven 3.6+**
   
-### Clonar o repositório
-
-```bash
-git clone https://github.com/seu-usuario/hotel-management-api.git
-cd hotel-management-api
