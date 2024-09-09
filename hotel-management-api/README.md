@@ -1,18 +1,35 @@
-## Getting Started
+# Hotel Management API
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descrição
 
-## Folder Structure
+A **Hotel Management API** é uma aplicação RESTful desenvolvida em **Spring Boot** que permite gerenciar hóspedes, quartos e reservas de um hotel. Ela expõe endpoints para criar, atualizar, consultar e deletar informações relacionadas à operação de um hotel, facilitando a comunicação com o banco de dados através de uma interface REST.
 
-The workspace contains two folders by default, where:
+### O que é uma API REST?
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Uma **API REST** (Representational State Transfer) é uma forma de construir aplicações que seguem princípios específicos para comunicar sistemas de forma eficiente e escalável usando o protocolo HTTP. Uma API RESTful utiliza os métodos HTTP para realizar operações em **recursos** (dados que representam objetos do mundo real, como hóspedes, quartos, reservas).
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Características principais desta API RESTful:
+1. **Stateless**: Cada requisição HTTP enviada ao servidor deve conter todas as informações necessárias para processar a solicitação. O servidor não mantém estado da sessão entre diferentes requisições.
+2. **Recursos**: Os recursos como `guests`, `rooms`, e `bookings` são manipulados através de **URLs**.
+3. **Métodos HTTP**: Os métodos padrão do HTTP (GET, POST, PUT, DELETE) são usados para realizar operações de leitura, criação, atualização e exclusão de recursos.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+#### Endpoints principais:
+- `GET /guests`: Retorna todos os hóspedes.
+- `POST /guests`: Cria um novo hóspede.
+- `GET /guests/{id}`: Retorna um hóspede específico.
+- `PUT /guests/{id}`: Atualiza as informações de um hóspede existente.
+- `DELETE /guests/{id}`: Remove um hóspede.
 
-## Dependency Management
+Esses endpoints seguem as convenções REST ao usar métodos HTTP para manipulação de recursos.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Tecnologias utilizadas
+- **Java 17**: Linguagem de programação.
+- **Spring Boot**: Framework para construir a API.
+- **Spring Data JPA**: Abstração para interagir com o banco de dados relacional.
+- **H2 Database**: Banco de dados em memória (utilizado para testes).
+- **Maven**: Gerenciador de dependências e build da aplicação.
+
+## Requisitos para executar o projeto
+- **Java 17+**
+- **Maven 3.6+**
+  
